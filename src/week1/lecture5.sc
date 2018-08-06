@@ -20,4 +20,5 @@ object lecture5 {
   
   def sqrt(x: Double) = sqrtIter(1.0, x)          //> sqrt: (x: Double)Double
   
+  sqrt(4)                                         //> res0: Double = 2.0000000929222947
 }

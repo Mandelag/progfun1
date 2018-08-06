@@ -18,6 +18,7 @@ object lecture5 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
     (guess + value/guess) / 2
   };System.out.println("""improve: (guess: Double, value: Double)Double""");$skip(44); 
   
-  def sqrt(x: Double) = sqrtIter(1.0, x);System.out.println("""sqrt: (x: Double)Double""")}
+  def sqrt(x: Double) = sqrtIter(1.0, x);System.out.println("""sqrt: (x: Double)Double""");$skip(13); val res$0 = 
   
+  sqrt(4);System.out.println("""res0: Double = """ + $show(res$0))}
 }
