@@ -8,8 +8,15 @@ object lecture5 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
   
   def sqrtIter(guess: Double, value: Double):Double = {
   	if (isGoodEnough(guess, value)) guess else sqrtIter(improve(guess, value), value)
-  };System.out.println("""sqrtIter: (guess: Double, value: Double)Double""");$skip(108); 
+  };System.out.println("""sqrtIter: (guess: Double, value: Double)Double""");$skip(415); 
   
+  /**
+   * Exercise
+   *
+   * Why: Is not very precise for small number, and can lead to non termination for large number.
+   * Reason: a) small number require higher precission, which means require smaller epsilon.
+   *   b) delta of large number can also be large with the improve() implementation.
+   */
   def isGoodEnough(guess: Double, value: Double):Boolean = {
   	abs(guess * guess - value) < EPSILON
   };System.out.println("""isGoodEnough: (guess: Double, value: Double)Boolean""");$skip(92); 

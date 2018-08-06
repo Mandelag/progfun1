@@ -10,6 +10,13 @@ object lecture5 {
   	if (isGoodEnough(guess, value)) guess else sqrtIter(improve(guess, value), value)
   }                                               //> sqrtIter: (guess: Double, value: Double)Double
   
+  /**
+   * Exercise
+   *
+   * Why: Is not very precise for small number, and can lead to non termination for large number.
+   * Reason: a) small number require higher precission, which means require smaller epsilon.
+   *   b) delta of large number can also be large with the improve() implementation.
+   */
   def isGoodEnough(guess: Double, value: Double):Boolean = {
   	abs(guess * guess - value) < EPSILON
   }                                               //> isGoodEnough: (guess: Double, value: Double)Boolean
