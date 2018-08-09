@@ -1,9 +1,12 @@
 package week1
 
 /**
- * Tail recursive factorial
+ * Tail recursive factorial.
+ * Donald Knuth: "Early optimization is the root of all evil"
+ * But here is that quote put into its context:
+ *   http://www.joshbarczak.com/blog/?p=580
  */
-object lecture7 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(145); 
+object lecture7 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport._; def main(args: Array[String])=$execute{;$skip(300); 
   def oldFactorial(x:Int):Int = {
   	if (x <= 1) 1 else x*factorial(x-1)
   };System.out.println("""oldFactorial: (x: Int)Int""");$skip(120); 
@@ -20,7 +23,7 @@ object lecture7 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
   };System.out.println("""factorial: (x: Int)Int""");$skip(31); val res$0 = 
   
   //tests
-  oldFactorial(4);System.out.println("""res0: Int = """ + $show(res$0));$skip(19); val res$1 = 
+  oldFactorial(5);System.out.println("""res0: Int = """ + $show(res$0));$skip(19); val res$1 = 
   tailFactorial(5);System.out.println("""res1: Int = """ + $show(res$1));$skip(15); val res$2 = 
   factorial(5);System.out.println("""res2: Int = """ + $show(res$2))}
 }
