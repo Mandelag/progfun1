@@ -7,16 +7,16 @@ package week1
  *   http://www.joshbarczak.com/blog/?p=580
  */
 object lecture7 {
-  def oldFactorial(x:Int):Int = {
+  def oldFactorial(x: Int): Int = {
   	if (x <= 1) 1 else x*factorial(x-1)
   }                                               //> oldFactorial: (x: Int)Int
   
-	def tailFactorial(x:Int, aggregate:Int=1):Int = {
+	def tailFactorial(x: Int, aggregate:Int=1): Int = {
   	if (x <= 1) aggregate else tailFactorial(x-1, x*aggregate)
   }                                               //> tailFactorial: (x: Int, aggregate: Int)Int
   
-  def factorial(x:Int):Int = {
-	  def tailFactorial(x:Int, aggregate: Int = 1):Int = {
+  def factorial(x: Int): Int = {
+	  def tailFactorial(x: Int, aggregate: Int = 1): Int = {
 	  	if (x <= 1) aggregate else tailFactorial(x-1, x*aggregate)
 	  }
 	  tailFactorial(x, 1)
