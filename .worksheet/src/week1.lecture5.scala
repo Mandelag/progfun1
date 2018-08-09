@@ -8,7 +8,7 @@ object lecture5 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
   
   def sqrtIter(guess: Double, value: Double):Double = {
   	if (isGoodEnough(guess, value)) guess else sqrtIter(improve(guess, value), value)
-  };System.out.println("""sqrtIter: (guess: Double, value: Double)Double""");$skip(415); 
+  };System.out.println("""sqrtIter: (guess: Double, value: Double)Double""");$skip(421); 
   
   /**
    * Exercise
@@ -18,7 +18,7 @@ object lecture5 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
    *   b) delta of large number can also be large with the improve() implementation.
    */
   def isGoodEnough(guess: Double, value: Double):Boolean = {
-  	abs(guess * guess - value) < EPSILON
+  	abs(guess * guess - value)/value < EPSILON
   };System.out.println("""isGoodEnough: (guess: Double, value: Double)Boolean""");$skip(92); 
   
   def improve(guess: Double, value: Double):Double = {
@@ -27,8 +27,7 @@ object lecture5 {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
   
   def sqrt(x: Double) = sqrtIter(1.0, x);System.out.println("""sqrt: (x: Double)Double""");$skip(13); val res$0 = 
   
-  sqrt(4);System.out.println("""res0: Double = """ + $show(res$0));$skip(17); val res$1 = 
-  
+  sqrt(4);System.out.println("""res0: Double = """ + $show(res$0));$skip(14); val res$1 = 
   sqrt(0.001);System.out.println("""res1: Double = """ + $show(res$1));$skip(16); val res$2 = 
   sqrt(0.1e-20);System.out.println("""res2: Double = """ + $show(res$2));$skip(15); val res$3 = 
   sqrt(1.0e20);System.out.println("""res3: Double = """ + $show(res$3));$skip(15); val res$4 = 
