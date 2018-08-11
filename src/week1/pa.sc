@@ -6,10 +6,25 @@ object pa {
    * Assignment 2
    */
   def balance(chars: List[Char]): Boolean = {
-    true
+    def balanceRec(chars: List[Char], open: Int): Boolean = {
+      if (open < 0) false else
+      if (chars.isEmpty) open == 0 else chars.head match
+      {
+    	    case '(' => balanceRec(chars.tail, open+1)
+    	    case ')' => balanceRec(chars.tail, open-1)
+    	    case _ => balanceRec(chars.tail, open)
+    	}
+    }
+    balanceRec(chars, 0)
   }                                               //> balance: (chars: List[Char])Boolean
   
-  balance("This (is a) balanced strings!".toList) //> res0: Boolean = true
+  balance("This )(()(is not a) balanced strings!".toList)
+                                                  //> res0: Boolean = false
+  balance("This (()(is not a) balanced strings!".toList)
+                                                  //> res1: Boolean = false
+  balance("This (()(is a)) balanced strings!".toList)
+                                                  //> res2: Boolean = true
+  
   
   /**
    * Assignment 1
