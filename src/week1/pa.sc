@@ -2,6 +2,14 @@ package week1
 
 object pa {
   
+  /**
+   * Assignment 2
+   */
+  def balance(chars: List[Char]): Boolean = {
+    true
+  }                                               //> balance: (chars: List[Char])Boolean
+  
+  balance("This (is a) balanced strings!".toList) //> res0: Boolean = true
   
   /**
    * Assignment 1
